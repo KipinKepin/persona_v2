@@ -1,0 +1,32 @@
+GET http://localhost:5000/customers
+
+###
+GET http://localhost:5000/segments
+
+###
+GET http://localhost:5000/persona/CIF002
+
+###
+POST http://localhost:5000/persona/analyze/CIF002
+
+###
+GET http://localhost:5000/segments
+
+###
+GET http://localhost:5000/segments/2/customers
+
+###
+GET http://localhost:5000/recommendations/CIF002/3
+
+###
+GET http://localhost:5000/recommendation-histories/CIF002
+
+###
+POST http://localhost:5000/recommendations/feedback/CIF002
+Content-Type: application/json
+
+{
+  "recommendation_history_id": 1,
+  "action": "IGNORE",
+  "user_reason": "Nasabah hedon"
+}
